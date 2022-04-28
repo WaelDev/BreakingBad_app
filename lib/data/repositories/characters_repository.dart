@@ -6,8 +6,8 @@ class CharactersRepository {
 
   CharactersRepository(this.charactersWebServices);
 
-  Future<List<Character>> getCharacters() async {
-    final data = await charactersWebServices.getCharacters();
+  Future<List<Character>> getAllCharacters() async {
+    final data = await charactersWebServices.getAllCharacters();
     var characters =
         data.map((character) => Character.fromJson(character)).toList();
     return characters;
